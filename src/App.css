@@ -1,38 +1,146 @@
+@import url('/node_modules/bootstrap/dist/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&family=Red+Hat+Display:wght@400;500;700&display=swap');
+
 .App {
-  text-align: center;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Red Hat Display', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+    padding: 18px;
+    border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbarshadow {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+    padding: 18px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all .2s ease-in-out;
+    z-index: 1;
+    border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar ul {
+    list-style-type: none;
+    margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar li {
+    margin-right: 1.5rem;
+    font-size: 19px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbarshadow ul {
+    list-style-type: none;
+    margin-bottom: 0;
 }
+
+.navbarshadow li {
+    margin-right: 1.5rem;
+    font-size: 19px;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: rgb(138, 138, 138);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all .1s ease-in-out;
+}
+
+a:hover,
+a:active {
+    color: #000;
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+.type{
+    overflow: hidden;
+    /* text-align: justify; */
+        white-space:nowrap;
+        width: 0;
+        animation: typing;
+        animation-duration: 2.5s;
+        animation-timing-function: steps(30, end);
+        animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+.skill{
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out;
+}
+
+.skill:hover{
+    filter: none;
+}
+
+/* backgroundColor:'#a2d9ff' */
