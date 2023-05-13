@@ -5,7 +5,7 @@ import Skill from './Skill'
 
 const Home = () => {
     return (
-        <div>
+        <div id='#Home'>
             <div className='d-flex justify-content-evenly align-items-center border' style={{ height: '85vh',  }}>
                 <div className="row m-0 d-flex align-items-cen">
                     <div className="col-md-7 ps-5 pt-4">

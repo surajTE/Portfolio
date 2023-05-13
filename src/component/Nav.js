@@ -19,10 +19,10 @@ const Nav = () => {
             <nav className={bar ? 'navbarshadow' : 'navbar'}>
                 <h4 className='m-0'>Suraj</h4>
                 <ul className='d-flex'>
-                    <li><Link to='/' className='active'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/project'>Project</Link></li>
-                    <li><Link to='/contact'>Contact</Link></li>
+                    <li><a herf='#Home'>Home</a></li>
+                    <li><a herf='#About'>About</a></li>
+                    <li><a herf='#Project'>Project</a></li>
+                    <li><a herf='#Contact'>Contact</a></li>
                 </ul>
             </nav>
         </div>
